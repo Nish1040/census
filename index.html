@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>समाज पोर्टल</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#02151c,#063a4a);
+      color:white;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .container{
+      text-align:center;
+      width:90%;
+      max-width:900px;
+    }
+
+    .title{
+      font-size:42px;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    .subtitle{
+      font-size:20px;
+      margin-bottom:40px;
+      color:#cde7ef;
+    }
+
+    .card-container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .card{
+      background:#0d3441;
+      padding:40px 20px;
+      border-radius:20px;
+      cursor:pointer;
+      transition:0.3s;
+      border:1px solid #1aa6c2;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      background:#145d73;
+    }
+
+    .card h2{
+      font-size:26px;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      font-size:16px;
+      color:#d6d6d6;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 25px;
+      background:#1aa6c2;
+      color:white;
+      border-radius:30px;
+      text-decoration:none;
+      font-size:16px;
+    }
+
+    .btn:hover{
+      background:#23c0df;
+    }
+
+    @media(max-width:768px){
+      .card-container{
+        grid-template-columns:1fr;
+      }
+
+      .title{
+        font-size:30px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="title">अखिल भारतीय नार्मदीय ब्राह्मण समाज</div>
+    <div class="subtitle">सामाजिक जनगणना पोर्टल</div>
+
+    <div class="card-container">
+
+      <!-- REGISTRATION -->
+      <div class="card" onclick="openRegistration()">
+        <h2>📝 Registration Form</h2>
+        <p>नए सदस्य का पंजीकरण करें और समाज डेटाबेस में जोड़ें</p>
+        <a class="btn">Open Form</a>
+      </div>
+
+      <!-- ID CARD -->
+      <div class="card" onclick="openIDCard()">
+        <h2>🆔 Identity Card</h2>
+        <p>अपना ID कार्ड देखें, डाउनलोड करें या प्रिंट करें</p>
+        <a class="btn">View Card</a>
+      </div>
+
+    </div>
+
+  </div>
+
+<script>
+
+  function openRegistration(){
+    window.location.href = "registration-form.html";
+  }
+
+  function openIDCard(){
+    window.location.href = "identity-card.html";
+  }
+
+</script>
+
+</body>
+</html>
